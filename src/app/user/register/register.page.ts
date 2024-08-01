@@ -61,7 +61,8 @@ export class RegisterPage implements OnInit {
 
       // Realizar una solicitud POST al servidor
       //this.httpClient.post('http://localhost:8080/api/register', registrationData)
-      this.httpClient.post('https://lrbk6lk2-8080.use.devtunnels.ms/api/register', registrationData)
+      //this.httpClient.post('https://lrbk6lk2-8080.use.devtunnels.ms/api/register', registrationData)
+      this.httpClient.post('https://sq5174dw-8080.use2.devtunnels.ms/api/register', registrationData)
         .subscribe(
           (response: any) => {
             // Registro exitoso, puedes manejar la respuesta aquí

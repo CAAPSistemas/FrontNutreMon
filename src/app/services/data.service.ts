@@ -81,8 +81,8 @@ export interface ResultadoMedicion {
 export class DataService {
   //private apiUrl = 'http://181.225.253.143:8080/api';
   //private apiUrl = 'http://localhost:8080/api';
-  private apiUrl = 'https://lrbk6lk2-8080.use.devtunnels.ms/api';
-
+  //private apiUrl = 'https://lrbk6lk2-8080.use.devtunnels.ms/api';
+  private apiUrl = 'https://sq5174dw-8080.use2.devtunnels.ms/api';
   constructor(private http: HttpClient) { }
 
   // Método asincrónico para login
