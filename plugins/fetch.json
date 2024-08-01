@@ -1,0 +1,26 @@
+{
+  "cordova-sqlite-storage": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-sqlite-storage"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-chrome-apps-sockets-tcp": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-chrome-apps-sockets-tcp"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-http": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-http"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp=self.webpackChunkapp||[]).push([[6429],{5321:()=>{window.global=window}},p=>{p(p.s=5321)}]);

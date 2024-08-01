@@ -1,0 +1,68 @@
+<ion-header [translucent]="true">  
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" style="margin-top: 5px;">NUTRE MON</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="welcome-content">
+  <div class="welcome-container">
+    <div class="welcome-image">
+      <img src="assets/images/Logo_utm .png" alt="Universidad Tecnica de Manabi">
+    </div>
+    <h1 class="welcome-title">Bienvenido a la Aplicación de Seguimiento de Desnutrición</h1>
+    <p class="welcome-description ion-text-center">
+      Nuestra aplicación está diseñada para ayudarte a realizar un seguimiento preciso y eficiente del estado nutricional de los pacientes.
+      Proporcionamos herramientas y funcionalidades que te permiten registrar y analizar datos relacionados con la desnutrición, así como
+      generar informes y visualizaciones para facilitar la toma de decisiones en el tratamiento y seguimiento de los pacientes.
+    </p>  
+  </div>      
+
+  <div *ngIf="!primeraEntrada" style="display:flex; flex-direction: column; align-items: center;width: 70%; padding-left: 20px; gap: 20px;">
+    <h1 class="welcome-title">Ayuda del sistema</h1>
+    <ion-card>
+      <img alt="Silhouette of mountains" src="../../assets/images/addP.jpg" />
+      <ion-card-header>
+        <ion-card-title>Adicionar Pacientes</ion-card-title>     
+      </ion-card-header>
+      <ion-card-content>
+        Esta interfaz nos permite adicionar una paciente nuevo al sistema, especificando los datos solicitados.
+      </ion-card-content>
+  </ion-card>
+  <ion-card>
+      <img alt="Silhouette of mountains" src="../../assets/images/listP.jpg" />
+      <ion-card-header>
+        <ion-card-title>Listar Pacientes</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        Esta interfaz nos muestra el listado de pacientes, donde se accede a tres opciones fundamentales 
+        [1]-Visualizar las consultas [2]-Actualizar datos del paciente [3]-Eliminar el paciente seleccionado. 
+      </ion-card-content>
+  </ion-card>
+   <ion-card>
+      <img alt="Silhouette of mountains" src="../../assets/images/listC.jpg" />
+      <ion-card-header>
+        <ion-card-title>Listar Consultas</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        En la interfaz se muestra el listado de consultas asociadas a un paciente, desde la primera a la más actual. En la parte inferior
+        se muestra una tabla comparativa de los indicadores, comparados entre las dos últimas consulta.
+      </ion-card-content>
+  </ion-card>
+  <ion-card>
+      <img alt="Silhouette of mountains" src="../../assets/images/Consult.jpg" />
+      <ion-card-header>
+        <ion-card-title>Adicionar Consultas</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        En la interfaz se muestra un formulario para el registro de los indicadores de la consulta asociada a un paciente, es importante destacar que 
+        cuando se insertan los datos del paciente si el mismo no existe se crea automáticamente en la base de datos.
+      </ion-card-content>
+  </ion-card>
+</div>
+</ion-content>

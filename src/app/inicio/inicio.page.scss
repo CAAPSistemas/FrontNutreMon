@@ -1,0 +1,32 @@
+ion-content.welcome-content {
+  --background: var(--ion-background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.welcome-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.welcome-image img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.welcome-title {
+  color: var(--ion-text-color);
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.welcome-description {
+  color: var(--ion-text-color);
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 40px; /* Aumenta el valor para separar más el texto de la imagen */
+}

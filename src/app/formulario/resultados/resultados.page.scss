@@ -1,0 +1,27 @@
+.page-content {
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: stretch; 
+    padding: 10px; 
+  }
+  
+  .result-grid {
+    margin-top: 20px;
+  }
+  
+  .result-row {
+    margin-bottom: 10px;
+  }
+  
+  .result-label {
+    font-weight: bold;
+  }
+  
+  .result-value {
+    color: #333;
+  }
+  
+
+  

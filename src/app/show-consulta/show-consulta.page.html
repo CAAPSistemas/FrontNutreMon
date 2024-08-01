@@ -1,0 +1,86 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title class="ion-text-center" >Consulta</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-fab slot="fixed" vertical="bottom" horizontal="end">
+  <ion-fab-button (click)="showResult()">
+    <ion-icon name="arrow-forward-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+<ion-content [fullscreen]="true" style="padding-top: 20px;">
+  <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Nombre: {{consulta?.nombre}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Apellidos: {{consulta?.apellidos}}</ion-label>        
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Cedula: {{consulta?.cedula}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Edad: {{consulta?.edad}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Sexo: {{consulta?.sexo?.toUpperCase()}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Peso (kg): {{consulta?.peso}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Talla (cm): {{consulta?.talla}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Tríceps (mm): {{consulta?.triceps}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Bíceps (mm): {{consulta?.biceps}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Subescapular (mm): {{consulta?.subescapular}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Cresta ilíaca (mm): {{consulta?.crestailiaca}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Supraespinale (mm): {{consulta?.supraespinale}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Abdominal (mm): {{consulta?.abdominal}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Muslo frontal (mm): {{consulta?.muslofrontal}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Brazo relajado (mm): {{consulta?.brazorelajado}}</ion-label>        
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Brazo flexionado (mm): {{consulta?.brazoflexionado}}</ion-label>        
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Muñeca (mm): {{consulta?.muneca}}</ion-label>
+     
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Cintura (mm): {{consulta?.cintura}}</ion-label>
+       
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Cadera (mm): {{consulta?.cadera}}</ion-label>
+
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Muslo medial (mm): {{consulta?.muslomedial}}</ion-label>
+
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Pantorrilla medial (mm): {{consulta?.pantorrillamedial}}</ion-label>
+       
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Perímetro de la muñeca (mm): {{consulta?.perimetromuneca}}</ion-label>
+      </ion-item>      
+  </ion-list>
+</ion-content>

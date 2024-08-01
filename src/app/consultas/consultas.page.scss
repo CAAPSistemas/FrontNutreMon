@@ -1,0 +1,32 @@
+.result-comparation {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+.comparation-items {   
+    padding: 20px;
+    width: 100%;
+   
+}
+
+.header-table {
+    background-color: lightgrey;
+    border: groove;
+}
+.header-table ion-col {
+    border-right: groove;
+}
+
+.header-table ion-col:last-child {
+    border-right: none;
+}
+
+.body-table {
+    background-color: rgba(236, 229, 229, 0.274);
+    border-bottom: groove;
+    border-right: groove;
+    border-left: groove;
+}

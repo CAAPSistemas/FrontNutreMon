@@ -1,0 +1,116 @@
+/* Estilos para el contenedor principal */
+ion-content {
+  --background: linear-gradient(to right, #0072C6, #fff, #52C41A);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Estilos para el formulario de inicio de sesión */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%; /* Ajustamos el ancho del contenedor para que ocupe el 90% del ancho de la pantalla */
+  max-width: 440px;
+  max-height: 70%;
+  background-color: transparent;
+  border-radius: 40px;
+  padding: 70px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reducimos la intensidad de la sombra */
+}
+
+/* Estilos para el contenedor del logotipo */
+.welcome-image {
+  background-color: transparent;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Estilos para la imagen */
+.welcome-image img {
+  max-width: 150px;
+  max-height: 150px;
+  background-color: transparent;
+}
+
+/* Estilos para el título */
+h3 {
+  color: #000;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px; /* Aumentamos el margen inferior para separar el título de los campos de entrada */
+}
+
+/* Estilos para los campos de entrada */
+ion-item {
+  --background: transparent;
+  margin-bottom: 20px; /* Aumentamos el margen inferior para separar los campos de entrada */
+}
+
+ion-label {
+  --color: #000; /* Aseguramos que el color del texto sea negro */
+}
+
+ion-input {
+  --color: #000;
+  background-color: transparent;
+  --padding-bottom: 10px; /* Aumentamos el espacio en la parte inferior para alejar la línea */
+  border: none; /* Eliminamos el borde */
+  border-bottom: none; /* Eliminamos la línea inferior */
+  max-width: 100%; /* Ajustamos el ancho del campo de entrada para que ocupe todo el ancho del contenedor */
+}
+
+
+/* Estilos para los botones de inicio de sesión y Google */
+.login-button,
+.google-login {
+  --color: #fff;
+  --border-radius: 5px;
+  --padding-start: 5px;
+  --padding-end: 5px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+}
+
+.login-button {
+  --background: red;
+}
+
+.google-login {
+  --background: green;
+}
+
+/* Estilos para el botón de creación de cuenta */
+.create-account-button {
+  --background: rgb(9, 42, 231);
+  --color: #fff;
+  --border-radius: 5px;
+  --padding-start: 5px;
+  --padding-end: 5px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; /* Aumentamos el margen superior para separar los botones del formulario */
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}

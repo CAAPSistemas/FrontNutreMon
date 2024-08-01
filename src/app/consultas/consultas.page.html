@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center" >Consultas</ion-title>
+    <ion-menu-button slot="start"></ion-menu-button>
+  </ion-toolbar>
+</ion-header>
+<!-- Boton Add nuevo paciente ----->
+<ion-fab slot="fixed" vertical="bottom" horizontal="end">
+  <ion-fab-button (click)="addConsult()">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+<ion-content [fullscreen]="true">
+  <p style="padding: 20px;margin-top: 15px;" *ngIf="consultas.length<1">El paciente seleccionado no tiene consultas asociadas,puede agregar consultas al paciente haciendo click sobre el botón adicionar en la parte inferior derecha 
+              <ion-icon name="arrow-down-outline" size="medium" color="primary"></ion-icon> 
+
+  </p>   
+
+  <ion-list>
+    <ion-item class="list-items"  *ngFor="let consulta of consultas; index as i; " (click)="goToConsult(consulta)">
+        <ion-label>{{i+1}}</ion-label>
+        <ion-label>Fecha: {{consulta.fechamedicion}}</ion-label>        
+    </ion-item>
+  </ion-list>  
+  <ion-text *ngIf="consultas.length>1" style="display: flex; justify-content: center;" color="secondary" >
+      <h3>Comparación con la última consulta</h3>
+  </ion-text>  
+  <ion-list *ngIf="consultas.length>1" class="comparation-items" >
+    <ion-row class="header-table">
+      <ion-col  col-4 >
+        <ion-label >Indicador</ion-label>
+      </ion-col>
+      <ion-col col-4 >
+        <ion-label >Valor última consulta</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <ion-label >Valor actual</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <ion-label >Diferencia</ion-label>
+      </ion-col>              
+  </ion-row>
+  <ion-row class="body-table" *ngFor="let valorcomport of comportamiento">
+      <ion-col  col-4 >
+        <ion-label >{{valorcomport.llave}}</ion-label>
+      </ion-col>
+      <ion-col col-4 >
+        <ion-label >{{valorcomport.valorAnt}}</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <ion-label >{{valorcomport.valorAct}}</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <ion-label >{{valorcomport.valor}}</ion-label>
+      </ion-col>  
+  </ion-row>
+   </ion-list>
+</ion-content>

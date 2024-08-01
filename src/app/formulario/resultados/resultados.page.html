@@ -1,0 +1,130 @@
+<ion-header [translucent]="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" style="margin-top: 10px;">Resultados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="height: 100%;">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h2>Recomendaciones</h2>
+        <ion-list>
+          <ion-item *ngFor="let recomendacion of recomendaciones">
+            {{ recomendacion }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <ion-label class="ion-padding">Nombre:</ion-label>
+            <ion-note slot="end">{{ nombre }}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-padding">Apellido:</ion-label>
+            <ion-note slot="end">{{ apellidos }}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-padding">Cédula:</ion-label>
+            <ion-note slot="end">{{ cedula }}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-padding">Edad:</ion-label>
+            <ion-note slot="end">{{ edad }}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-padding">Sexo:</ion-label>
+            <ion-note slot="end">{{ sexo }}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-padding">Peso Teórico:</ion-label>
+            <ion-note slot="end">{{ pesoTeorico }}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-padding">% Peso Teórico:</ion-label>
+            <ion-note slot="end">{{ porcentajePesoTeorico }}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-padding">Cambio de Peso Reciente:</ion-label>
+            <ion-note slot="end">{{ cambioPesoReciente }}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-padding">IMC:</ion-label>
+            <ion-note slot="end">{{ imc }}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-padding">C:</ion-label>
+            <ion-note slot="end">{{ c }}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-padding">M:</ion-label>
+            <ion-note slot="end">{{ m }}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-padding">Densidad:</ion-label>
+            <ion-note slot="end">{{ densidad }}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-padding">% Grasa:</ion-label>
+            <ion-note slot="end">{{ porcentajeGrasa }}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-padding">Masa de Grasa:</ion-label>
+            <ion-note slot="end">{{ masaGrasa }}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-padding">Área Total del Brazo:</ion-label>
+            <ion-note slot="end">{{ areaTotalBrazo }}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-padding">Área Muscular del Brazo:</ion-label>
+            <ion-note slot="end">{{ areaMuscularBrazo }}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-padding">Área Grasa del Brazo:</ion-label>
+            <ion-note slot="end">{{ areaGrasaBrazo }}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-padding">% Grasa del Brazo:</ion-label>
+            <ion-note slot="end">{{ porcentajeGrasaBrazo }}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-padding">Masa Magra:</ion-label>
+            <ion-note slot="end">{{ masaMagra }}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-padding">Área Muscular del Brazo Disponible:</ion-label>
+            <ion-note slot="end">{{ areaMuscularBrazoDisponible }}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-padding">Masa Muscular Esquelética:</ion-label>
+            <ion-note slot="end">{{ masaMuscularEsqueletica }}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-padding">% Masa Muscular Esquelética:</ion-label>
+            <ion-note slot="end">{{ porcentajeMasaMuscularEsqueletica }}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-padding">Perímetro de la Cintura:</ion-label>
+            <ion-note slot="end">{{ perimetroCintura }}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-padding">Índice Cintura-Cadera:</ion-label>
+            <ion-note slot="end">{{ indiceCinturaCadera }}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-padding">Índice Cintura-Talla:</ion-label>
+            <ion-note slot="end">{{ indiceCinturaTalla }}</ion-note>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

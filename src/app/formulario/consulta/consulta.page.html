@@ -1,0 +1,114 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" style="margin-top: 10px;">Consulta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="padding-top: 20px;">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <form (ngSubmit)="guardar()" novalidate #consultaForm="ngForm">
+            <ion-item>
+              <ion-label position="stacked">Nombre</ion-label>
+              <ion-input type="text" name="nombre" [(ngModel)]="datos.nombre" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Apellidos</ion-label>
+              <ion-input type="text" name="apellidos" [(ngModel)]="datos.apellidos" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Cedula</ion-label>
+              <ion-input type="number" name="cedula" [(ngModel)]="datos.cedula" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Edad</ion-label>
+              <ion-input type="number" name="edad" [(ngModel)]="datos.edad" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Sexo</ion-label>
+              <ion-select name="sexo" [(ngModel)]="datos.sexo" required>
+                <ion-select-option value="Masculino">Masculino</ion-select-option>
+                <ion-select-option value="Femenino">Femenino</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Peso (kg)</ion-label>
+              <ion-input type="number" name="peso" [(ngModel)]="datos.peso" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Talla (cm)</ion-label>
+              <ion-input type="number" name="talla" [(ngModel)]="datos.talla" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Tríceps (mm)</ion-label>
+              <ion-input type="number" name="triceps" [(ngModel)]="datos.triceps" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Bíceps (mm)</ion-label>
+              <ion-input type="number" name="biceps" [(ngModel)]="datos.biceps" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Subescapular (mm)</ion-label>
+              <ion-input type="number" name="subescapular" [(ngModel)]="datos.subescapular" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Cresta ilíaca (mm)</ion-label>
+              <ion-input type="number" name="cresta-iliaca" [(ngModel)]="datos.crestaIliaca" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Supraespinale (mm)</ion-label>
+              <ion-input type="number" name="supraspinale" [(ngModel)]="datos.supraspinale" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Abdominal (mm)</ion-label>
+              <ion-input type="number" name="abdominal" [(ngModel)]="datos.abdominal" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Muslo frontal (mm)</ion-label>
+              <ion-input type="number" name="muslo-frontal" [(ngModel)]="datos.musloFrontal" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Brazo relajado (mm)</ion-label>
+              <ion-input type="number" name="brazo-relajado" [(ngModel)]="datos.brazoRelajado" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Brazo flexionado (mm)</ion-label>
+              <ion-input type="number" name="brazo-flexionado" [(ngModel)]="datos.brazoFlexionado" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Muñeca (mm)</ion-label>
+              <ion-input type="number" name="muneca" [(ngModel)]="datos.muneca" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Cintura (mm)</ion-label>
+              <ion-input type="number" name="cintura" [(ngModel)]="datos.cintura" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Cadera (mm)</ion-label>
+              <ion-input type="number" name="cadera" [(ngModel)]="datos.cadera" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Muslo medial (mm)</ion-label>
+              <ion-input type="number" name="muslo-medial" [(ngModel)]="datos.musloMedial" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Pantorrilla medial (mm)</ion-label>
+              <ion-input type="number" name="pantorrilla-medial" [(ngModel)]="datos.pantorrillaMedial" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Perímetro de la muñeca (mm)</ion-label>
+              <ion-input type="number" name="perimetro-muneca" [(ngModel)]="datos.perimetroMuneca" required></ion-input>
+            </ion-item>
+            <ion-button expand="full" type="submit" [disabled]="!consultaForm.form.valid">Enviar</ion-button>
+          </form>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

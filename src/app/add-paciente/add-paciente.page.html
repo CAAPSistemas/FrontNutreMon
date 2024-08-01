@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" style="margin-top: 10px;">Agregar Paciente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="margin-up">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-input label="Nombre:" [(ngModel)]="nombre" labelPlacement="stacked" placeholder="Enter Nombre" style="font-size: 16px; height: 40px;"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-input label="Apellidos:" [(ngModel)]="apellidos" labelPlacement="stacked" placeholder="Enter Apellidos"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>     
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-input label="Cédula:" [(ngModel)]="cedula" labelPlacement="stacked" placeholder="Enter Cédula" style="font-size: 16px; height: 40px;"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-input type="number" label="Edad:"  [(ngModel)]="edad" labelPlacement="stacked" placeholder="Enter Edad"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>    
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-select name="sexo" [(ngModel)]="sexo" label="Sexo" placeholder="Sexo">
+            <ion-select-option value="Masculino">Masculino</ion-select-option>
+            <ion-select-option value="Femenino">Femenino</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>      
+    </ion-row> 
+  </ion-grid>
+  <ion-button expand="block" class="margin-10px" (click)="addPaciente()" >Agregar Paciente</ion-button>
+</ion-content>

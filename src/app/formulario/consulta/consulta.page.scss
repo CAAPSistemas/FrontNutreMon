@@ -1,0 +1,22 @@
+
+.formulario-modal {
+    --ion-background-color: rgba(0, 0, 0, 0.5);
+    --ion-padding: 20px;
+    --ion-border-radius: 8px;
+  }
+  
+  .centered-title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  ion-item.input-valid {
+    --ion-color-base: var(--ion-color-success);
+  }
+  
+  ion-item.input-invalid {
+    --ion-color-base: var(--ion-color-danger);
+  }
+  

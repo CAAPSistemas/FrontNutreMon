@@ -1,0 +1,42 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+          <ion-list>
+    <ion-item>
+      <ion-icon slot="start" name="moon"></ion-icon>
+      <ion-label *ngIf="!darkMode">Cambiar a modo oscuro</ion-label>
+      <ion-label *ngIf="darkMode">Cambiar a modo claro</ion-label>
+      <ion-toggle slot="end"
+                  [ngModel]="darkMode"
+                  (ionChange)="change()"></ion-toggle>
+    </ion-item>
+  </ion-list>
+        <div class="welcome-image">
+          <img src="assets/images/user.png" alt="Universidad Tecnica de Manabi">
+        </div>
+        <ion-list id="inbox-list">
+          <ion-list-header>{{ usuario?.name }}</ion-list-header>
+          <ion-note>{{ usuario?.email }}</ion-note>
+
+
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+              <ion-icon aria-hidden="true" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-label>{{ p.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+        <ion-list id="labels-list">
+          <ion-list-header>Etiqueta</ion-list-header>
+
+          <ion-item *ngFor="let label of labels" lines="none">
+            <ion-icon aria-hidden="true" slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
+            <ion-label>{{ label }}</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

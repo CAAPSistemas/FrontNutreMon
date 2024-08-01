@@ -1,0 +1,71 @@
+/* Estilos para el contenedor principal */
+ion-content {
+  --background: linear-gradient(to right, #0072C6, #fff, #52C41A);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-y: none; /* Habilitamos el desplazamiento vertical si el contenido excede el alto del contenedor */
+}
+
+/* Estilos para el formulario */
+.form-container {
+  max-width: 500px;
+  width: 90%;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el logotipo */
+.welcome-image {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para la imagen del logotipo */
+.welcome-image img {
+  max-width: 150px;
+  max-height: 150px;
+  background-color: transparent;
+  margin-bottom: -75px;
+}
+
+/* Estilos para el título */
+h3 {
+  color: #000;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para los campos de entrada */
+ion-item {
+  --background: transparent;
+  margin-bottom: 10px;
+}
+
+ion-input {
+  --color: #000;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el botón */
+ion-button {
+  --background: red;
+  --color: #fff;
+  --border-radius: 5px;
+  --padding-start: 15px;
+  --padding-end: 15px;
+  width: 100%;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}

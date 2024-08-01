@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "486615893097",
+    "project_id": "nutremonapp",
+    "storage_bucket": "nutremonapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486615893097:android:d54d9a2d53623aedd20ef8",
+        "android_client_info": {
+          "package_name": "com.nutremon.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "486615893097-24pa9ijed20ha5nm0tg4a2odju4oofeu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChUI4fYdvbWcXj7LlKDdbFQfdEaYWTUzI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "486615893097-24pa9ijed20ha5nm0tg4a2odju4oofeu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

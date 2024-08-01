@@ -1,0 +1,69 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" style="margin-top: 10px;">Pacientes</ion-title>
+  </ion-toolbar>
+</ion-header>
+<!-- Boton Add nuevo paciente ----->
+<ion-fab slot="fixed" vertical="bottom" horizontal="end">
+  <ion-fab-button routerDirection="root"  [routerLink]="['/add-paciente']"  routerLinkActive="selected">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+<!---------------------------------->
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let paciente of pacientes" >
+      <ion-grid [fixed]="true">
+        <ion-row >
+            <ion-col>
+              <ion-row style="padding-top: 8px;">
+                <div style="display: flex; flex-direction: row; gap:4px;">
+                  <ion-label style="font-weight: bold;">Nombre y Apellidos: </ion-label>
+                  <ion-label >{{ paciente.nombre }} {{ paciente.apellidos }}</ion-label>
+               </div>              
+             </ion-row>
+              <ion-row style="padding-top: 8px;">
+                <div style="display: flex; flex-direction: row; gap:4px;">
+                  <ion-label style="font-weight: bold;">Edad: </ion-label>
+                  <ion-label >{{ paciente.edad }}</ion-label>
+               </div>              
+             </ion-row>
+            </ion-col>
+             <ion-col>
+              <ion-row style="padding-top: 8px;">
+                <div style="display: flex; flex-direction: row; gap:4px;">
+                  <ion-label style="font-weight: bold;">Sexo: </ion-label>
+                  <ion-label >{{ paciente.sexo }} </ion-label>
+               </div>              
+             </ion-row>
+              <ion-row style="padding-top: 8px;">
+                <div style="display: flex; flex-direction: row; gap:4px;">
+                  <ion-label style="font-weight: bold;">Cédula: </ion-label>
+                  <ion-label >{{ paciente.cedula }}</ion-label>
+               </div>              
+             </ion-row>
+            </ion-col>
+            <div  (click)="itemSelect(paciente.id)">
+              <svg class="svg-views-button"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9ZM11 12C11 11.4477 11.4477 11 12 11C12.5523 11 13 11.4477 13 12C13 12.5523 12.5523 13 12 13C11.4477 13 11 12.5523 11 12Z" >
+
+                </path> <path fill-rule="evenodd" clip-rule="evenodd" d="M21.83 11.2807C19.542 7.15186 15.8122 5 12 5C8.18777 5 4.45796 7.15186 2.17003 11.2807C1.94637 11.6844 1.94361 12.1821 2.16029 12.5876C4.41183 16.8013 8.1628 19 12 19C15.8372 19 19.5882 16.8013 21.8397 12.5876C22.0564 12.1821 22.0536 11.6844 21.83 11.2807ZM12 17C9.06097 17 6.04052 15.3724 4.09173 11.9487C6.06862 8.59614 9.07319 7 12 7C14.9268 7 17.9314 8.59614 19.9083 11.9487C17.9595 15.3724 14.939 17 12 17Z" fill="#00000"></path> </g></svg>
+           </div>
+            <div  (click)="selectPatients(paciente,'UPDT')">
+              <svg class="svg-delete-update-button" fill="#000000" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g > <path d="M15,6V1.76l-1.7,1.7A7,7,0,1,0,14.92,9H13.51a5.63,5.63,0,1,1-1.2-4.55L10.76,6Z"><title>Modificar paciente</title></path> </g> </g></svg>
+           </div>
+           <div (click)="selectPatients(paciente,'DEL')">
+             <svg class="svg-delete-update-button" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 7H20"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M6 7V18C6 19.6569 7.34315 21 9 21H15C16.6569 21 18 19.6569 18 18V7"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V7H9V5Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+           </div> 
+        </ion-row>
+        
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+  <!--<ion-button expand="block" routerLink="/add-paciente">Agregar Paciente</ion-button>-->
+</ion-content>

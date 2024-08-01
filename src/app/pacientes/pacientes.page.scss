@@ -1,0 +1,23 @@
+.svg-delete-update-button {
+    width: 30px;
+    height: 30px;
+    padding-left: 2px;
+    padding-right: 3px;
+    font-weight: bold;  
+    cursor: pointer;
+    color: var(--ion-text-color);
+    fill: var(--ion-text-color);
+    stroke: var(--ion-text-color);
+}
+
+.svg-views-button {
+    width: 40px;
+    height: 40px;
+    padding-left: 2px;
+    padding-right: 3px;
+    padding-bottom: 8px;
+    cursor: pointer;
+    color:var(--ion-text-color);
+    fill: var(--ion-text-color);
+    stroke: var(--ion-text-color);
+}
